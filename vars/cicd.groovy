@@ -1,4 +1,4 @@
-def newGit(a)
+def newGit(repo)
 {
-  "enter the git url ${a}"
+  "enter the git url ${repo}"
 }
