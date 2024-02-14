@@ -14,7 +14,4 @@ def newTest(jobname,testfile)
 {
   sh "java -jar /home/ubuntu/.jenkins/workspace/${jobname}/${testfile}.jar"
 }
-def newDelivery(jobname,ip,appname)
-{
-  sh "sudo scp /home/ubuntu/.jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${appname}.war"
-}
+
