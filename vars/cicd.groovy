@@ -10,9 +10,9 @@ def newDeploy(jobname,ip,appname)
 {
   sh "sudo scp /home/ubuntu/.jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${appname}.war"
 }
-def newTest(testfile)
+def newTest(jobname,testfile)
 {
-  sh "java -jar /home/ubuntu/.jenkins/workspace/${testfile}.jar"
+  sh "java -jar /home/ubuntu/.jenkins/workspace/${jobname}/${testfile}.jar"
 }
 def newDelivery(jobname,ip,appname)
 {
