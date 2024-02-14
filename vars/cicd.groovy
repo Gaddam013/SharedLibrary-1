@@ -4,7 +4,7 @@ def newGit(repo)
 }
 def newBuild()
 {
-  "mvn package"
+  sh "mvn package"
 }
 def newDeploy(file_name,Des_ip,app)
 {
