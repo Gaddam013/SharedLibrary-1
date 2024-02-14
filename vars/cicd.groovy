@@ -6,7 +6,7 @@ def newBuild()
 {
   "mvn package"
 }
-def newDeploy(file_name,Des_ip,app)
+def newDeploy(jobname,Des_ip,appname)
 {
-  sh "sudo scp /home/ubuntu/.jenkins/workspace/${file_name}/webapp/target/webapp.war ubuntu@${Des_ip}:/var/lib/tomcat9/webapps/${app}.war"
+  sh "sudo scp /home/ubuntu/.jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${appname}.war"
 }
