@@ -1,10 +1,10 @@
 def newGit(repo)
 {
-  "enter the git url ${repo}"
+  git "${repo}"
 }
 def newBuild()
 {
-  "mvn package"
+  sh 'mvn package'
 }
 def newDeploy(jobname,ip,appname)
 {
